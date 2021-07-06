@@ -1,0 +1,15 @@
+{% extends 'dealebayfinder/layout.html'%}
+<!---->
+{% block content%}
+<!---->
+{% block titulo%}
+<title>Registrar usuario</title>
+{% endblock titulo%}
+
+<form class="form" method="post">
+    {% csrf_token %}
+    <!---->
+    {{ form.as_p }}
+    <button type="submit" id="submit"> Registrar</button>
+</form>
+{% endblock%}

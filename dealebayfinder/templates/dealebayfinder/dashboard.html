@@ -1,0 +1,44 @@
+{% extends 'dealebayfinder/layout.html'%}
+<!---->
+{% block content%}
+<!---->
+{% block titulo%}
+<title>Dash borard</title>
+{% endblock titulo%}
+<!-- -->
+
+<article class="rounded-lg">
+    <div class="container-article rounded-lg">
+        <div>
+
+            <table class="table table-bordered table-success table-striped rounded-lg">
+                <h3 class="">Lastest Search</h3>
+                <br>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Searched Item</th>
+                        <th>Amount Found</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for latestsearch in latestsearches %}
+                    <tr>
+                        <th>{{ latestsearch.id_busqueda }}</th>
+                        <td>{{ latestsearch.fecha }}</td>
+                        <td class="px-3">{{ latestsearch.item }}</td>
+                        <td class="text-center">{{ latestsearch.cantidad }}</td>
+                    </tr>
+                    {%endfor%}
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</article>
+
+<!-- -->
+{% endblock%}

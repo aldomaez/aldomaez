@@ -1,0 +1,15 @@
+{% extends 'dealebayfinder/layout.html'%}
+<!---->
+{% block content%}
+<!---->
+{% block titulo%}
+<title>Ingresar</title>
+{% endblock titulo%}
+
+<form class="form rounded-lg" method="post">
+    {% csrf_token %}
+    <!---->
+    {{ form.as_p }}
+    <button type="submit" id="submit"> Ingresar  </button>
+</form>
+{% endblock%}
