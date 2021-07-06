@@ -16,8 +16,9 @@ Including another URLconf
 #from django.contrib import admin
 from django.urls import path, include
 
-#path('admin/', admin.site.urls),
 
 urlpatterns = [    
-    path('', include('hello.urls')),
+    #path('', include('hello.urls')),
+    #path('admin/', admin.site.urls),
+    path('', include('dealebayfinder.urls')),
 ]
